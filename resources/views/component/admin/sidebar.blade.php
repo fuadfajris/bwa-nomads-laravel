@@ -13,8 +13,8 @@
 <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">
-    <a class="nav-link" href="index.html">
+<li class="nav-item {{ request()->is('admin') ? 'active' : ''}}">
+    <a class="nav-link" href="{{ route('dashboard') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -92,10 +92,10 @@
 </li>
 
 <!-- Nav Item - Charts -->
-<li class="nav-item">
-    <a class="nav-link" href="charts.html">
+<li class="nav-item {{ request()->is('admin/travel-package') ? 'active' : ''}}">
+    <a class="nav-link" href="{{ route('travel-package') }}">
         <i class="fas fa-fw fa-chart-area"></i>
-        <span>Charts</span></a>
+        <span>Travel Package</span></a>
 </li>
 
 <!-- Nav Item - Tables -->

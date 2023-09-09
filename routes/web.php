@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TravelPackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,5 @@ Route::get('/', function () {
 
 Route::prefix('admin')->namespace('Admin') ->group(function () {
     Route::get('/',  [DashboardController::class, 'index']) ->name('dashboard');
+    Route::get('/travel-package',  [TravelPackageController::class, 'index']) -> name('travel-package');
 });
