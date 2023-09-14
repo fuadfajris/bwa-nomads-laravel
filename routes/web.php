@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GalleriesController;
 use App\Http\Controllers\Admin\TravelPackageController;
+use App\Http\Controllers\Admin\TransactionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +23,7 @@ Route::get('/', function () {
 
 Route::prefix('admin')->namespace('Admin') ->group(function () {
     Route::get('/',  [DashboardController::class, 'index']) ->name('dashboard');
+    Route::get('/galleries',  [GalleriesController::class, 'index']) -> name('galleries');
     Route::get('/travel-package',  [TravelPackageController::class, 'index']) -> name('travel-package');
+    Route::get('/transactions',  [TransactionsController::class, 'index']) -> name('transactions');
 });
