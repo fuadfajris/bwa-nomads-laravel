@@ -333,3 +333,12 @@
 <!-- /.container-fluid -->
 
 @endsection
+
+@section('script')
+<!-- Page level plugins -->
+<script src="{{url('admin-test/vendor/chart.js/Chart.min.js')}}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{url('admin-test/js/demo/chart-area-demo.js')}}"></script>
+<script src="{{url('admin-test/js/demo/chart-pie-demo.js')}}"></script>
+@endsection
