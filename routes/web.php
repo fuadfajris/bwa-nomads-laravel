@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GalleriesController;
 use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\Admin\TransactionsController;
+use App\Http\Controllers\Admin\TestCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,9 @@ Route::prefix('admin')
     Route::get('/galleries',  [GalleriesController::class, 'index']) -> name('galleries');
     Route::get('/transactions',  [TransactionsController::class, 'index']) -> name('transactions');
     Route::resource('travel-package', TravelPackageController::class);
+    Route::get('/items',  [TestCRUDController::class, 'index']) ->name('items');
+    Route::put('/items/{id}',  [TestCRUDController::class, 'update'])->name('items.update');
+    Route::delete('/items/{id}',  [TestCRUDController::class, 'destroy'])->name('items.destroy');
 });
 
 // Route::get('/dashboard', function () {
