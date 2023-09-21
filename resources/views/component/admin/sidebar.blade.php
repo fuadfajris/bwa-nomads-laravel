@@ -45,7 +45,7 @@
 
 <!-- Nav Item - Travel Packages -->
 <li class="nav-item {{ request()->is('admin/travel-package') ? 'active' : ''}}">
-    <a class="nav-link" href="{{ route('travel-package') }}">
+    <a class="nav-link" href="{{ route('travel-package.index') }}">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Travel Packages</span></a>
 </li>

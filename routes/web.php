@@ -27,9 +27,8 @@ Route::prefix('admin')
 ->group(function(){
     Route::get('/',  [DashboardController::class, 'index']) ->name('dashboard');
     Route::get('/galleries',  [GalleriesController::class, 'index']) -> name('galleries');
-    Route::get('/travel-package',  [TravelPackageController::class, 'index']) -> name('travel-package');
     Route::get('/transactions',  [TransactionsController::class, 'index']) -> name('transactions');
-
+    Route::resource('travel-package', TravelPackageController::class);
 });
 
 // Route::get('/dashboard', function () {
