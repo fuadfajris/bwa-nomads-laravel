@@ -1,5 +1,5 @@
 <?php $currentPage = 'test-crud';?>
-@extends('layouts.admin.admin')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">

@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\DB;
 class TravelPackageController extends Controller
 {
     public function index(Request $request) {
-        // $items = TravelPackage::all();
-        $items = DB::table('travel_packages')->paginate(1);
+        $items = TravelPackage::paginate(2);
         return view('pages.admin.travel-package.index',[
             'items' => $items
         ]);
