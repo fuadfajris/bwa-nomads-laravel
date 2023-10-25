@@ -11,7 +11,7 @@
 
     <title>SB Admin 2 - Dashboard</title>
 
-    @include('component.admin.style')
+    @include('includes.admin.style')
 
 </head>
 
@@ -20,7 +20,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        @include('component.admin.sidebar')
+        @include('includes.admin.sidebar')
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -28,7 +28,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                @include('component.admin.navbar')
+                @include('includes.admin.navbar')
 
                 @yield('content')
 
@@ -36,7 +36,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('component.admin.footer')
+            @include('includes.admin.footer')
             <!-- End of Footer -->
 
         </div>
@@ -74,7 +74,7 @@
     </div>
 
     @yield('script')
-    @include('component.admin.script')
+    @include('includes.admin.script')
 
 </body>
 
